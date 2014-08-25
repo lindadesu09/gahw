@@ -23,7 +23,7 @@
     <tbody>
       <tr>
         <td id="humanScore">0</td>
-        <td id="computerScore">0</td>
+        <td id="compScore">0</td>
       </tr>
     </tbody>
     <tfoot>
@@ -37,15 +37,16 @@
 
 <h2>Choose Wisely</h2>
 
-<button id="rock">Rock</button>
+<button type="button" onclick="playGame('R')">Rock</button>
 
-<button id="paper">Paper</button>
+<button type="button" onclick="playGame('P')">Paper</button>
 
-<button id="scissors">Scissors</button>
+<button type="button" onclick="playGame('S')">Scissors</button>
 
+<span id="result">&nbsp;</span><br />
 <div id="status"></div>
 
-<script src="js/main.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>

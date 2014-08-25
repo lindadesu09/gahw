@@ -3,7 +3,7 @@ body {
   font-size: 20px;
   text-align: center;
   background: black;
-  color: lime;
+  color: #6bc5e5;
   margin: 3em;
 }
 
@@ -12,7 +12,7 @@ strong {
 }
 
 button {
-  background: lime;
+  background: #6bc5e5;
   color: black;
   border: none;
   padding: 10px 15px;
@@ -21,16 +21,16 @@ button {
   font-weight: bold;
 }
 button:active {
-  background: green;
+  background: #31afdb;
 }
 
 .scoreboard {
   width: 14em;
   margin: auto;
-  border: 1px solid lime;
+  border: 1px solid #6bc5e5;
 }
 .scoreboard h2 {
-  border-bottom: 1px solid lime;
+  border-bottom: 1px solid #6bc5e5;
   margin: 0;
   padding: 10px;
 }
