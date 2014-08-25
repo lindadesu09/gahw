@@ -5,11 +5,11 @@ var choice = {
 		};
 
 var humanWins = 0;
-var compWins = 0;
+var computerWins = 0;
 
 function playGame(play) {
 	var humanChoice;
-	var compChoice;
+	var computerChoice;
 
 	if (play==='R') {
 		humanChoice = choice.rock;
@@ -21,18 +21,18 @@ function playGame(play) {
 
 	var computer = (Math.floor( Math.random() * 3 ));
 	if ( computer === 1 ) {
-		compChoice = choice.rock }
+		computerChoice = choice.rock }
 	else { if ( computer === 2 ) {
-		compChoice = choice.paper }
+		computerChoice = choice.paper }
 	else { 
-		compChoice = choice.scissors }
+		computerChoice = choice.scissors }
 	}
 
 	var result = document.getElementById('result')
 
-	result.innerHTML ="<p>You played '" + humanChoice.name + "' and the bot played '" + compChoice.name + "'</p>";
+	result.innerHTML ="<p>You played '" + humanChoice.name + "' and the bot played '" + computerChoice.name + "'</p>";
 
-	var win = humanChoice.value - compChoice.value;
+	var win = humanChoice.value - computerChoice.value;
 	if ( win === 0 ) { 
 		result.innerHTML += "<p><b>You tied. :|</b></p>" 
 	} else {
@@ -40,16 +40,16 @@ function playGame(play) {
 				result.innerHTML += "<p><b>You win! :)</b></p>"; humanWins++; 
 			} else {
 					if ( win === -1 || win === 2 ) { 
-						result.innerHTML += "<p><b>You lose. :(</b></p>"; compWins++; 
+						result.innerHTML += "<p><b>You lose. :(</b></p>"; computerWins++; 
 					} else {}
 		}
 	}
 
 	var humanScore = document.getElementById('humanScore');
-	var compScore = document.getElementById('compScore');
+	var computerScore = document.getElementById('computerScore');
 
 	humanScore.innerHTML = humanWins;
-	compScore.innerHTML = compWins;
+	computerScore.innerHTML = computerWins;
 }
 
 
