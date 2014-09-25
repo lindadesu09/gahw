@@ -1,0 +1,13 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("../fonts/flaticonAdd.eot");
+	src: url("../fonts/flaticonAdd.eot#iefix") format("embedded-opentype"),
+	url("../fonts/flaticonAdd.woff") format("woff"),
+	url("../fonts/flaticonAdd.ttf") format("truetype"),
+	url("../fonts/flaticonAdd.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.flaticon-add6:before {
+	content: "\e000";
+}
