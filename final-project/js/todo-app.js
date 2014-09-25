@@ -22,14 +22,11 @@
 
 		bindEvents: function () {
 			this.$newTodo.on('keyup', this.create.bind(this));
-			this.$setHour.on('keyup', this.create.bind(this)); // added
-			this.$setMin.on('keyup', this.create.bind(this)); // added
 			this.$toggleAll.on('change', this.toggleAll.bind(this));
 
 			var list = this.$todoList;
 			list.on('change', '.toggle', this.toggle.bind(this));
 			list.on('dblclick', 'label', this.edit.bind(this));
-			//list.on('dblclick', 'span', this.edit.bind(this)); // added
 			list.on('keyup', '.edit', this.editKeyup.bind(this));
 			list.on('focusout', '.edit', this.update.bind(this));
 			list.on('click', '.destroy', this.destroy.bind(this));
@@ -61,10 +58,10 @@
 						'<div class="column3 list-name listSingle" >' +
 							'<i class="left displayInline icon-sq list-icon fa flaticon-alarm15"></i>' +
 							'<label class="displayHour list-title"></label>' +
-							'<span class="list-title list-padding">hr</span>' +
-							'<span class="list-title list-padding">&nbsp;:&nbsp;</span>' +
+							'<div class="left list-title list-padding">hr</div>' +
+							'<div class="left list-title list-padding">&nbsp;:</div>' +
 							'<label class="displayMin list-title"></label>' +
-							'<span class="list-title list-padding">min</span>' +
+							'<div class="left list-title list-padding">min</div>' +
 						'</div>' +
 						'<div class="column1 listSingle">' +
 							'<i class="icon-sq list-icon fa fa-check-square-o"></i>'+
@@ -72,14 +69,18 @@
 						'</div>' +
 					'</div>' +
 					'<input class="edit" />' +
-					'</li>');
+					'</li>' +
+					'<div style="clear:both></div>');
 
 				var todo = this.todos[i];
+				// alert ("todo.title: " +todo.title); 
+				// alert ("todo.title: " +todo.displayHour); // checking
+
 				$li.attr('data-id', todo.id);
-				$li.find('.title').text(todo.title);  // display new todo-task
+				$li.find('.title').text(todo.title);  
 				$li.find('.edit').text(todo.title);
-				$li.find('.displayHour').text(todo.displayHour);  // added hour
-				$li.find('.displayMin').text(todo.displayMin);  // added hour
+				$li.find('.displayHour').text(todo.displayHour);  // added
+				$li.find('.displayMin').text(todo.displayMin);  // added
 				if (todo.completed) {
 					$li.addClass('completed');
 					$li.find('.toggle').prop('checked', true);
@@ -117,13 +118,16 @@
 			var $input = $(e.target);
 			var val = $input.val().trim();
 
+
 			if (e.which !== ENTER_KEY || !val) {
 				return;
 			}
 
 			this.todos.push({
 				id: this.todos.length + 1,
-				title: val,
+				title: val, // put value @ proper place
+				displayHour: val,// added
+				displayMin: val, // added
 				completed: false
 			});
 
@@ -168,6 +172,7 @@
 
 			if (val) {
 				this.todos[i].title = val;
+				this.todos[i].displayHour = hr; //added
 			} else {
 				this.todos.splice(i, 1);
 			}

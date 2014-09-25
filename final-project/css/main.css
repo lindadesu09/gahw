@@ -339,7 +339,7 @@ input[ name="displayHourValue"], input[name="displayMinValue"]  {
 
 .list-view ul li.listSingle { border: none;}
 
-li.list-view { margin-top: 30px;}
+li.list-view { margin-top: 30px; height: 35px;}
 
 
 /* To-do function */
@@ -457,12 +457,17 @@ input[type="checkbox"] {
 	margin-bottom: -1px;
 }
 
+
+
 label.list-title { /*added*/
 	display: inline-block;
 	float: left;
 	padding-left: 10px;
 	padding-right: 10px;
 }
+
+
+
 
 /* ==========================================================================
    03 ADD-TASK - task-listing
@@ -477,6 +482,7 @@ label.list-title { /*added*/
    		border: none;
    		color:#cbc2c2;
    		font-size: 2.8rem;
+   		width: 100%;
    	}
 
    	.add-icon-clock { 
@@ -530,7 +536,6 @@ label.list-title { /*added*/
 		width: 200px;
    		background: #fb7a3d;
    	}
-
 
    	.timer-btn input[name="startTime"] {
    		border: 1px solid #fb7a3d;
@@ -803,17 +808,26 @@ footer {
 
 	.kerning2x { letter-spacing: -1rem;}
 
-	.textarea-btn input[type="submit"] {
+	/*.textarea-btn input[type="submit"] {
 		width: 88%;
-	}
+	}*/
 
-	.timer-box {
+	/*.timer-box {
 		border-radius: 14px;
 		padding: 10px 12px;
 		font-size: 2em;
-	}
+	}*/
 
 	.btn-top {margin-top:50px;}
 
 	.symbol {font-size:2em;}
+
+	/* add-task @ */
+	
+
+	input[name="taskName"] {
+   		font-size: 2.3rem;
+   	}
+
+
 }
