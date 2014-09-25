@@ -4,7 +4,8 @@ document.getElementById('btn-Celsius').onclick = convertCelsius;
 function convertCelsius(){
 
   var celsius = document.getElementById('celsius').value;
-      farhenheit = celsius * 2;
+  var farhenheit = celsius * 2;
+  
   if (farhenheit > 100){
     document.getElementById('farhenheit').value = 'hot!!';
   } else {
@@ -19,7 +20,7 @@ document.getElementById('btn-farhenheit').onclick = convertFarhenheit;
 function convertFarhenheit() {
 
 var farhenheit = document.getElementById('farhenheit').value;
-  celsius = farhenheit / 2;
+var celsius = farhenheit / 2;
 
   if (celsius > 50) {
     document.getElementById("celsius").value = "hot!!";
@@ -27,5 +28,11 @@ var farhenheit = document.getElementById('farhenheit').value;
     document.getElementById("celsius").value = celsius;
   }
 }
+
+
+
+
+
+
 
 
