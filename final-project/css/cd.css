@@ -28,7 +28,7 @@ Main components
 -------------------------------- */
 header[role=main-banner], header[role=sub-banner] {
   position: relative;
-  height: 235px; /*AMEND*/
+  height: 275px; /*AMEND*/
   background: #343642;
 }
 
