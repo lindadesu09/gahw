@@ -28,7 +28,7 @@ Main components
 -------------------------------- */
 header[role=main-banner] {
   position: relative;
-  height: 275px; /*AMEND*/
+  height: 202px; /*AMEND*/
   background: #343642;
 }
 
@@ -116,7 +116,7 @@ header[role=main-banner]::after {
     background: transparent;
     font-size: 1rem; /*ADDED*/
   }
-  .main-nav a.cd-signin, .main-nav a.cd-signup, .main-nav a.cd-logout {
+  .main-nav a.cd-signin, .main-nav a.cd-signup, .main-nav a.cd-logout, .main-nav a.cd-menu {
     /*padding: .6em 1em;*/
     padding: 0.6em 1em 0.6em .8em;
     /*border: 1px solid rgba(255, 255, 255, 0.6);*/
@@ -547,12 +547,8 @@ a.cd-nav-home:hover  {
 
 
 /* -------------------------------- 
-
 popup-nav style
-
 -------------------------------- */
-
-
 @media only screen and (min-width: 868px) {
   .main-nav li:first-child { /* popup-nav */
     display:none;
@@ -561,6 +557,13 @@ popup-nav style
     /* when popup-nav hidden */
     margin-top: 20px;
 
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .main-nav li:first-child { /* popup-nav */
+    display:inline-block;
+  }
 }
 
 

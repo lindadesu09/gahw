@@ -256,7 +256,7 @@ content: "\e000";
 	/*.link-home:hover {color:#e7b411; }*/
 	.link-home:hover {color:#ffde74; text-decoration: underline; }
 
-	.main-theme {margin: 30px 0 100px 0;}
+	.main-theme {margin: 18px 0 80px 0;}
 
 	.kerningLogo {letter-spacing: -0.5rem;}
 
@@ -790,7 +790,7 @@ footer {
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 
-	.kerningLogo {letter-spacing: -0.1rem;}
+	.header-logo {font-size: 2.2rem;}
 
 	.kerning {letter-spacing: -.4rem;}
 
@@ -802,6 +802,8 @@ footer {
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	
+	.kerningLogo {letter-spacing: 0rem;}
 
 	.kerning {letter-spacing: -.3rem;}
 
@@ -812,6 +814,12 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+
+	.header-logo {font-size: 2rem;}
+
+	.quote {font-size: 2.5rem;}
+
+	.quote2x { font-size: 1.4rem;}
 
 	.quote3x {
 		font-size: 4.5rem;
