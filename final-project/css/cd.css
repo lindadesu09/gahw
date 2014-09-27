@@ -43,12 +43,19 @@ header[role=main-banner]::after, header[role=sub-banner]::after {
   clear: both;
 }
 
+@media only screen and (min-width: 480px) {
+  header[role=main-banner] {
+    height: 230px;
+  }
+}
+
 /*@media only screen and (min-width: 768px) {*/
 @media only screen and (min-width: 868px) {
   header[role=main-banner], header[role=sub-banner] {
     height: 90px;
   }
 }
+
 .main-nav {
   float: left; /*Amend*/
   width: 100%; /*Amend*/
@@ -68,6 +75,11 @@ header[role=main-banner]::after, header[role=sub-banner]::after {
   font-weight: bold; /*ADDED*/
   font-size: 1.1rem; /*ADDED*/
 }
+
+.main-nav li a.cd-nav-last { 
+  /* when popup-nav Display @ Mobile */
+  margin-top: 12px;
+} 
 
 /*@media only screen and (min-width: 768px) {*/
 @media only screen and (min-width: 868px) {
@@ -547,10 +559,14 @@ popup-nav style
 -------------------------------- */
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 868px) {
   .main-nav li:first-child { /* popup-nav */
     display:none;
   }
+  .main-nav li a.cd-nav-last { 
+    /* when popup-nav hidden */
+    margin-top: 0;
+
 }
 
 
