@@ -12,6 +12,17 @@ input, textarea {
 input::-ms-clear, textarea::-ms-clear {
   display: none;
 }
+
+.img-replace {
+  /* replace text with an image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+}
+
+
 /* -------------------------------- 
 Main components 
 -------------------------------- */
@@ -416,7 +427,7 @@ xsigin/signup popup
   text-decoration: underline;
 }
 
-.cd-close-form, .cd-close {
+.cd-close-form, .cd-close{
   /* form X button on top right */
   display: block;
   position: absolute;
@@ -501,6 +512,8 @@ popup-timer style
   line-height: 45px;
   text-transform: uppercase;
   color: #FFF;
+   margin-top: 10px;
+  margin-bottom: 10px;
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -512,10 +525,19 @@ popup-timer style
   background-color: #ffd140;
 }
 
-a.cd-nav-close { color:#343642; border:none;}
+.cd-popup-container .cd-buttons li:first-child a {
+  margin-left: 10px;
+}
 
-a:hover.cd-nav-close { text-decoration: underline;}
+.cd-popup-container .cd-buttons li:last-child a {
+  margin-right: 10px;
+}
 
+a.cd-nav-close { border:none;} /* remove border around "X"*/
+
+a.cd-nav-home:hover  { 
+  background: url("../img/cd-icon-close.svg") no-repeat center center;
+} 
 
 
 /* -------------------------------- 
