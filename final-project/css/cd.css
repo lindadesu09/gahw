@@ -565,7 +565,7 @@ popup-nav style
   }
   .main-nav li a.cd-nav-last { 
     /* when popup-nav hidden */
-    margin-top: 0;
+    margin-top: 20px;
 
 }
 
