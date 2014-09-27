@@ -15,7 +15,7 @@ var taskFocus = new (function() {
             if (currentTime < 0) currentTime = 0;
         },
         timerComplete = function() {
-            $('.cd-popup').addClass('is-visible');
+            $('.cd-popup-timer').addClass('is-visible');
         },
         init = function() {
             $countdown = $('#countdown');
