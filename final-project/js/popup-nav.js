@@ -10,12 +10,12 @@ jQuery(document).ready(function($){
 	
 	$('.cd-popup-trigger').on('click', function(event){
 		event.preventDefault();
-		$('.cd-popup').addClass('is-visible');
+		$('.cd-popup-nav').addClass('is-visible');
 	});
 	
 	//close popup
-	$('.cd-popup').on('click', function(event){
-		if( $(event.target).is('.cd-nav-close') || $(event.target).is('.cd-popup') ) {
+	$('.cd-popup-nav').on('click', function(event){
+		if( $(event.target).is('.cd-nav-close') || $(event.target).is('.cd-popup-nav') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
 		}
@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 	//close popup when clicking the esc keyboard button
 	$(document).keyup(function(event){
     	if(event.which==$ESC_KEY){
-    		$('.cd-popup').removeClass('is-visible');
+    		$('.cd-popup-nav').removeClass('is-visible');
 	    }
     });
 
