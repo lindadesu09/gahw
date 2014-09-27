@@ -512,7 +512,7 @@ popup-timer style
   background-color: #ffd140;
 }
 
-a.cd-nav-close { color:#343642;}
+a.cd-nav-close { color:#343642; border:none;}
 
 a:hover.cd-nav-close { text-decoration: underline;}
 
