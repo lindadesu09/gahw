@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
 	
 	//close popup
 	$('.cd-popup').on('click', function(event){
-		if( $(event.target).is('.cd-close') || $(event.target).is('.cd-popup') ) {
+		if( $(event.target).is('.cd-nav-close') || $(event.target).is('.cd-popup') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
 		}
