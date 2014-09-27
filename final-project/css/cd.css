@@ -89,9 +89,9 @@ header[role=main-banner]::after, header[role=sub-banner]::after {
     display: inline-block;
     margin-left: 1em;
   }
-  .main-nav li:nth-last-child(2) {
+  /*.main-nav li:nth-last-child(2) {
     margin-left: 2em;
-  }
+  }*/
   .main-nav a {
     display: inline-block;
     height: auto;
@@ -416,7 +416,7 @@ xsigin/signup popup
   text-decoration: underline;
 }
 
-.cd-close-form {
+.cd-close-form, .cd-close {
   /* form X button on top right */
   display: block;
   position: absolute;
@@ -445,7 +445,7 @@ xsigin/signup popup
 
 /* -------------------------------- 
 
-popup style
+popup-timer style
 
 -------------------------------- */
 
@@ -485,16 +485,54 @@ popup style
   transform: translateY(0);
 }
 
-.cd-close {
-  /* form X button on top right */
-  display: block;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: 0;
-  top: -40px;
-  background: url("../img/cd-icon-close.svg") no-repeat center center;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+/* @ popup nav : cd-button */
+.cd-popup-container .cd-buttons:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+.cd-popup-container .cd-buttons li {
+  float: left;
+  width: 33.3333%;
+}
+.cd-popup-container .cd-buttons a {
+  display: block;
+  height: 60px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.cd-popup-container .cd-buttons li a {
+  background: #ffc508;
+}
+.cd-popup-container .cd-buttons li a:hover {
+  background-color: #ffd140;
+}
+
+a.cd-nav-close { color:#343642;}
+
+a:hover.cd-nav-close { text-decoration: underline;}
+
+
+
+/* -------------------------------- 
+
+popup-nav style
+
+-------------------------------- */
+
+
+@media only screen and (min-width: 768px) {
+  .main-nav li:first-child { /* popup-nav */
+    display:none;
+  }
+}
+
+
+
+
+
+
