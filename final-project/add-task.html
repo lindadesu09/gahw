@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Add Task | everyThing Done!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/login-form.css">
+    <link rel="stylesheet" href="css/cd.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/flaticonAdd.css">
+    <!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+</head>
+<!-- <body class="home-body"> -->
+<body>
+	<header role="sub-banner">
+		<!-- <div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div> -->
+		<div class="container12">
+			<div class="row">
+				<a class="header-logo" href="index.html">everyThing DONE!<span class="kerningLogo">//</span></a>
+
+				<!-- <nav class="main-nav">
+					<ul>
+						<li><a class="cd-signin" href="#0">&nbsp;<i class="fa flaticon-pencil41"></i>&nbsp;&nbsp;Sign in // Create Account</a></li>
+					</ul>
+				</nav> -->
+		</div> <!-- # row-->
+		</div><!-- # container12 -->
+	</header>
+	<div style="clear:both"></div><br><br>
+
+<!-- add task name -->
+	<div class="container12">
+            <section id="todoapp">
+                <header id="header">
+                    <!--<form action="index.html" method="get">-->
+                    <!--<h1><input id="new-todo" type="text" name="taskName" placeholder="add task's name..." autofocus></h1>-->
+                    <div class="container12 section-top add-section-time">
+                    <i class="add-icon-clock fa flaticon-alarm15"></i>
+                    <span class="add-time-wrap">
+                        <input id="setHour" type="text" name="setHour" maxlength="2" placeholder="00" autofocus>
+                        <span class="add-time-unit">hr</span>
+                        <span style="color:#cbc2c2;">&nbsp;:</span>
+                        <input id="setMin" type="text" name="setMin" maxlength="2" placeholder="00">
+                        <span class="add-time-unit">min</span>
+                    </span>
+                    <h1><input id="new-todo" type="text" name="taskName" maxlength="55" placeholder="add task's name..."></h1>    
+                    </div>  
+                    <hr>
+                    <section id="main">
+                        <ul id="todo-list"></ul>
+                    </section>
+                 </header>
+            </section>        
+	</div><!-- end container12-->
+
+<div style="clear:both"></div>
+
+ <footer>
+        <div class="container12">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html"><i class="footer-icon fa fa-home"></i><span class="hidden">Home</span></a></li>
+                    <li><a href="list.html"><i class="footer-icon fa fa-list-alt"></i><span class="hidden">Task-list</span>
+                        </a>
+                    </li>
+                    
+                     <li><a href="add-task.html"><i class="footer-icon fa flaticon-add6"></i><span class="hidden">+Task</span></a></li>
+
+                    <li><a href="timer.html"><i class="footer-icon fa flaticon-alarm15"></i><span class="hidden">Timer</span></a></li>
+                    <li><a href="index.html"><i class="footer-icon fa fa-sign-out"></i><span class="hidden">Logout</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/todo-app.js"></script>
+
+</body>
+</html>
