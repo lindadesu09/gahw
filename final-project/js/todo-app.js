@@ -117,6 +117,8 @@
 		create: function (e) {
 			var $input = $(e.target);
 			var val = $input.val().trim();
+			var setHour = $('#setHour').val(); // added
+			var setMin = $('#setMin').val(); // added
 
 
 			if (e.which !== ENTER_KEY || !val) {
@@ -126,8 +128,8 @@
 			this.todos.push({
 				id: this.todos.length + 1,
 				title: val, // put value @ proper place
-				displayHour: val,// added
-				displayMin: val, // added
+				displayHour: setHour,// added
+				displayMin: setMin, // added
 				completed: false
 			});
 
