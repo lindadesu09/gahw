@@ -23,7 +23,7 @@
 		bindEvents: function () {
 			this.$newTodo.on('keyup', this.create.bind(this));
 			this.$toggleAll.on('change', this.toggleAll.bind(this));
-
+			
 			var list = this.$todoList;
 			list.on('change', '.toggle', this.toggle.bind(this));
 			list.on('dblclick', 'label', this.edit.bind(this));
@@ -186,8 +186,23 @@
 			this.todos.splice(this.indexFromEl(e.target), 1);
 			this.render();
 		}
+
 	};
 
   App.init();
+
+  // When the Clear List button is clicked, clear out the items 
+	$('#clear').on('click', clearList);
+
+	function clearList() {
+
+	// Find all the items and remove them
+	$('#todo-list li').remove();
+
+	// The list has been changed, so update the count
+	// updateCount();
+
+}
+
 
 })();
