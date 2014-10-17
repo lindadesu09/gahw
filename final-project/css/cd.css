@@ -73,7 +73,6 @@ header[role=main-banner]::after {
     height: auto;
     cursor: auto;
     float: right;
-    margin-right: 5%;
   }
   .main-nav ul {
     position: static;
