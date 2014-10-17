@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home | everyThing Done!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/cd.css" type="text/css">
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<style type="text/css">
+		html { background: #ffc508;}
+	</style>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+</head>
+<body>
+	<header role="main-banner">
+		<div class="container12">
+			<div class="row">
+				<a class="headerLogo" href="index.html">everyThing DONE!<span class="kerningLogo">//</span></a>
+				<nav class="main-nav">
+					<ul>
+              			<li><a href="#0" class="cd-popup-trigger cd-menu">&nbsp;<i class="fa fa-list-ul"></i>&nbsp;&nbsp;Menu</a>
+							<div class="cd-popup-nav" role="alert">
+								<div class="cd-popup-container">
+									<ul class="cd-buttons">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="add-task.html">+Task</a></li>
+										<li><a href="timer.html">Timer</a></li>
+									</ul>
+									<a href="#0" class="cd-close cd-nav-close img-replace">Close</a>
+								</div> <!-- cd-popup-container -->
+							</div></li> <!-- cd-popup -->
+						<li><a class="cd-sigin-trigger cd-signin cd-nav-last" href="#">&nbsp;<i class="fa flaticon-pencil41"></i>&nbsp;&nbsp;Sign in // Create Account</a></li>
+					</ul>
+				</nav>
+		</div> <!-- # row-->
+		</div><!-- # container12 -->
+	</header>
+	<div style="clear:both"></div>
+	<section class="mainTheme">
+		<div class="container12">
+			<h2 class="quote">plan your day<span class="kerning">//</span></h2>
+			<h2 class="quote">focus on your task<span class="kerning">//</span></h2>
+			<h2 class="quote">get everyThing</h2>
+			<h2 class="quote3x typing"><a class="linkHome" href="add-task.html">DONE!<span class="kerning2x">//</span></a></h2>
+			<h1 class="quote2x">Having a GOOD START</a> to the day!</i></span></h1>
+		</div>	
+	</section>
+<!-- Login form -->
+<div class="cd-user-modal"> 
+	<div class="cd-user-modal-container"> 
+		<ul class="cd-switcher">
+			<li><a href="#">Sign in</a></li>
+			<li><a href="#">New account</a></li>
+		</ul>
+		<div id="cd-login"> <!-- log in form -->
+			<form class="cd-form" action"index.html" method="post">
+				<p class="fieldset">
+					<label class="image-replace cd-email" for="signin-email">E-mail</label>
+					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail" required autofocus>
+				</p>
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signin-password">Password</label>
+					<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password" required>
+					<a href="#0" class="hide-password">Hide</a>
+				</p>
+				<p class="fieldset">
+					<input type="checkbox" id="remember-me" checked>
+					<label for="remember-me">Remember me</label>
+				</p>
+				<p class="fieldset">
+					<input class="full-width" type="submit" value="Login">
+				</p>
+			</form>
+			<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+		</div> <!-- cd-login -->
+		<div id="cd-signup"> <!-- sign up form -->
+			<form class="cd-form" action"index.html" method="post">
+				<p class="fieldset">
+					<label class="image-replace cd-username" for="signup-username">Username</label>
+					<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username" required>
+				</p>
+				<p class="fieldset">
+					<label class="image-replace cd-email" for="signup-email">E-mail</label>
+					<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail" required>
+				</p>
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signup-password">Password</label>
+					<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password" required>
+					<a href="#0" class="hide-password">Hide</a>
+				</p>
+				<p class="fieldset">
+					<input type="checkbox" id="accept-terms">
+					<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+				</p>
+				<p class="fieldset">
+					<input class="full-width has-padding" type="submit" value="Create account">
+				</p>
+			</form>
+		</div> <!-- cd-signup -->
+
+		<div id="cd-reset-password"> <!-- reset password form -->
+			<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+			<form class="cd-form" action"index.html" method="post">
+				<p class="fieldset">
+					<label class="image-replace cd-email" for="reset-email">E-mail</label>
+					<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail" required>
+				</p>
+				<p class="fieldset">
+					<input class="full-width has-padding" type="submit" value="Reset password">
+				</p>
+			</form>
+			<p class="cd-form-bottom-message"><a href="#">Back to log-in</a></p>
+		</div> <!-- cd-reset-password -->
+		<a href="#0" class="cd-close-form">Close</a>
+	</div> <!-- cd-user-modal-container -->
+</div> <!-- cd-user-modal -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/modernizr.js"></script>
+<script type="text/javascript" src="js/popup-nav.js"></script> 
+</body>
+</html>
