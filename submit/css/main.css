@@ -36,7 +36,6 @@ h1, h2, h3 {font-family: 'Roboto', sans-serif;
 h1 {
   font-size: 45px; /* ie8 or below */	
   font-size: 2.8em; /* 45px */
- /* line-height: 67px;*/
 }
 h2 {
   font-size: 30px; /* ie8 or below */	
@@ -45,7 +44,7 @@ h2 {
   
 }
 h3 {
-  font-size: 21px;
+  font-size: 21px; /* ie8 or below */
   font-size: 1.875em; /* 30px */
   line-height: 31px;
 }
