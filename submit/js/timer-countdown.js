@@ -1,8 +1,12 @@
+
+/**
+ * timer-countdown.js
+ */
 var taskFocus = new (function() {
     var $countdown,
         $form, // Form used to change the countdown time
         incrementTime = 70,
-        currentTime = 180000,
+        currentTime = 150000,
         updateTimer = function() {
             $countdown.html(formatTime(currentTime));
             if (currentTime == 0) {
@@ -14,9 +18,12 @@ var taskFocus = new (function() {
             currentTime -= incrementTime / 10;
             if (currentTime < 0) currentTime = 0;
         },
+
         timerComplete = function() {
-            $('.cd-popup-timer').addClass('is-visible');
+            var musicSrc = "music/alarmMusic.mp3";
+            var myWindow = window.open(musicSrc, 'mp3player', "width=220,height=130,left=0,left=100,top=100,location=no");         
         },
+
         init = function() {
             $countdown = $('#countdown');
             taskFocus.Timer = $.timer(updateTimer, incrementTime, true);
@@ -26,14 +33,14 @@ var taskFocus = new (function() {
                 return false;
             });
         };
+
     this.resetCountdown = function() {
-        var newTime = parseInt($form.find('input[type=text]').val()) * 100;
+        var newTime = parseInt($form.find('#countTime').val()) * 100;
         if (newTime > 0) {currentTime = newTime;}
         this.Timer.stop().once();
     };
     $(init);
 });
-
 
 // Common functions
 function pad(number, length) {
@@ -44,7 +51,9 @@ function pad(number, length) {
 function formatTime(time) {
     var min = parseInt(time / 6000),
         sec = parseInt(time / 100) - (min * 60);
-      //  hundredths = pad(time - (sec * 100) - (min * 6000), 2);
 		return (min > 0 ? pad(min, 2) : "00") + ":" + pad(sec, 2);
-    //return (min > 0 ? pad(min, 2) : "00") + ":" + pad(sec, 2) + ":" + hundredths;
 }
+
+
+
+

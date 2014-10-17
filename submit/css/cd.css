@@ -434,6 +434,7 @@ xsigin/signup popup
 /* -------------------------------- 
 popup-timer style
 -------------------------------- */
+
 .cd-popup-container {
   position: relative;
   width: 90%;
@@ -512,6 +513,7 @@ a.cd-nav-home:hover  {
   background: url("../img/cd-icon-close.svg") no-repeat center center;
 } 
 
+
 /* -------------------------------- 
 popup-nav style
 -------------------------------- */
@@ -522,6 +524,7 @@ popup-nav style
   .main-nav li a.cd-nav-last { 
     /* when popup-nav hidden */
     margin-top: 20px;
+
 }
 
 /* iPads (portrait) ----------- */

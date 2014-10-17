@@ -1,4 +1,35 @@
 jQuery(document).ready(function($){
+
+	'use strict';
+
+	var $ESC_KEY = 27;
+
+/* 
+	   open Nav popup
+	   ========================================================================== */	
+	
+	$('.cd-popup-trigger').on('click', function(event){
+		event.preventDefault();
+		$('.cd-popup-nav').addClass('is-visible');
+	});
+	
+	//close popup
+	$('.cd-popup-nav').on('click', function(event){
+		if( $(event.target).is('.cd-nav-close') || $(event.target).is('.cd-popup-nav') ) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+		}
+	});
+	//close popup when clicking the esc keyboard button
+	$(document).keyup(function(event){
+    	if(event.which==$ESC_KEY){
+    		$('.cd-popup-nav').removeClass('is-visible');
+	    }
+    });
+
+	/* 
+	   open Signin popup
+	   ========================================================================== */
 	var $form_modal = $('.cd-user-modal'),
 		$form_login = $form_modal.find('#cd-login'),
 		$form_signup = $form_modal.find('#cd-signup'),
@@ -8,23 +39,12 @@ jQuery(document).ready(function($){
 		$tab_signup = $form_modal_tab.children('li').eq(1).children('a'),
 		$forgot_password_link = $form_login.find('.cd-form-bottom-message a'),
 		$back_to_login_link = $form_forgot_password.find('.cd-form-bottom-message a'),
-		$main_nav = $('.main-nav');
+		$main_nav = $('.main-nav');   
 
-	//open modal
-	$main_nav.on('click', function(event){
-
-		if( $(event.target).is($main_nav) ) {
-			// on mobile open the submenu
-			$(this).children('ul').toggleClass('is-visible');
-		} else {
-			// on mobile close submenu
-			$main_nav.children('ul').removeClass('is-visible');
-			//show modal layer
-			$form_modal.addClass('is-visible');	
-			//show the selected form
-			( $(event.target).is('.cd-signup') ) ? signup_selected() : login_selected();
-		}
-
+	$('.cd-sigin-trigger').on('click', function(event){
+		event.preventDefault();
+		$('.cd-user-modal').addClass('is-visible');
+		( $(event.target).is('.cd-signup') ) ? signup_selected() : login_selected();
 	});
 
 	//close modal
@@ -35,12 +55,12 @@ jQuery(document).ready(function($){
 	});
 	//close modal when clicking the esc keyboard button
 	$(document).keyup(function(event){
-    	if(event.which=='27'){
+    	if(event.which==$ESC_KEY){
     		$form_modal.removeClass('is-visible');
 	    }
     });
 
-	//switch from a tab to another
+    //switch from a tab to another
 	$form_modal_tab.on('click', function(event) {
 		event.preventDefault();
 		( $(event.target).is( $tab_login ) ) ? login_selected() : signup_selected();
@@ -91,17 +111,6 @@ jQuery(document).ready(function($){
 		$form_forgot_password.addClass('is-selected');
 	}
 
-	//REMOVE THIS - it's just to show error messages 
-	$form_login.find('input[type="submit"]').on('click', function(event){
-		event.preventDefault();
-		$form_login.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
-	});
-	$form_signup.find('input[type="submit"]').on('click', function(event){
-		event.preventDefault();
-		$form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
-	});
-
-
 	//IE9 placeholder fallback
 	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
 	if(!Modernizr.input.placeholder){
@@ -126,8 +135,7 @@ jQuery(document).ready(function($){
 		});
 	}
 
-});
-
+}); // end JQuery
 
 //credits http://css-tricks.com/snippets/jquery/move-cursor-to-end-of-textarea-or-input/
 jQuery.fn.putCursorAtEnd = function() {
